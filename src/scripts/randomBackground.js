@@ -1,10 +1,16 @@
+import asd from '../pictures/asd1.jpg'
+import resort from '../pictures/resort.jpg'
+import activities from '../pictures/activities.jpg'
+import resbac from '../pictures/resbac.jpg'
+import contbac from '../pictures/contbac.jpg'
+
 function getRandomBackground() {
 	const backgrounds = [
-	"url('../pictures/asd1.jpg')",
-	"url('../pictures/resort.jpg')",
-	"url('../pictures/activities.jpg')",
-	"url('../pictures/resbac.jpg')",
-	"url('../pictures/contbac.jpg')"
+	{asd},
+	{resort},
+	{activities},
+	{resbac},
+	{contbac}
 	];
 
 	const randomIndex = Math.floor(Math.random() * backgrounds.length);
