@@ -4,29 +4,6 @@ import cont from '../pictures/cont.jpg'
 function Contact() {
 	useEffect(window.setRandomBackground, [])
 	useEffect(window.formScript, [])
-
-	// CAPTCHA Logic
-	const [num1, setNum1] = useState(Math.floor(Math.random() * 10));
-	const [num2, setNum2] = useState(Math.floor(Math.random() * 10));
-	const [answer, setAnswer] = useState('');
-	const [isCorrect, setIsCorrect] = useState(false);
-	const [submitted, setSubmitted] = useState(false);
-    
-	const handleAnswerChange = (e) => {
-	    setAnswer(e.target.value);
-	};
-    
-	const handleSubmit = (e) => {
-	    e.preventDefault();
-	    if (parseInt(answer, 10) === num1 + num2) {
-		setIsCorrect(true);
-		setSubmitted(true);
-		// Here, you can handle the actual form submission (e.g., send data to the server)
-	    } else {
-		alert("Incorrect answer. Please try again.");
-		setAnswer('');
-	    }
-	};
 	
 	return (
 		<div className="flex-container-c">
